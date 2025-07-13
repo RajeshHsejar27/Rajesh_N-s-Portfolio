@@ -95,7 +95,7 @@ export default function Projects() {
                       <Button size="sm" asChild>
                         <a href={project.live} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Live Demo
+                          View App
                         </a>
                       </Button>
                     </div>

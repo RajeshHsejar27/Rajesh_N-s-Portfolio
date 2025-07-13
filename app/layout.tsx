@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], preload: false });
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
   description: SITE_CONFIG.description,
-  keywords: ['software engineer', 'web developer', 'react', 'next.js', 'cybersecurity', 'ai'],
+  keywords: ['software engineer', 'web developer', 'react', 'next.js', 'cybersecurity', 'ai','portfolio','rajesh','hsejar','rajesh-hsejar'],
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
   openGraph: {
@@ -27,12 +27,6 @@ export const metadata: Metadata = {
         alt: SITE_CONFIG.title,
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.description,
-    images: [SITE_CONFIG.ogImage],
   },
   robots: {
     index: true,

@@ -16,6 +16,48 @@
   }
 }
 
+.hero-section {
+  background-image: url('/backgroundl.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dark{
+  .hero-section {
+  background-image: url('/backgroundd.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+}
+
+.featured-section {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2), transparent 40%),
+    linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark Mode */
+.dark .featured-section {
+  background-image: 
+    radial-gradient(circle at 10% 70%, rgba(255, 255, 255, 0.06), transparent 30%),
+    radial-gradient(circle at 90% 30%, rgba(255, 255, 255, 0.05), transparent 40%),
+    linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+
+
+
+.blur-box {
+  backdrop-filter: blur(2px);                /* Blur effect */
+  -webkit-backdrop-filter: blur(2px);        /* Safari support */
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

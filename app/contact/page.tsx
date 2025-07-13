@@ -19,7 +19,7 @@ export default function Contact() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Get In Touch
+              Let's Connect!
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Have a project in mind or want to discuss opportunities? 
@@ -61,11 +61,11 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
-                    <span className="text-gray-700">+91 73375 55331</span>
+                    <span className="text-gray-700">+91 81247 75826</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600" />
-                    <span className="text-gray-700">India</span>
+                    <span className="text-gray-700">Chennai, India</span>
                   </div>
                 </CardContent>
               </Card>
@@ -109,7 +109,7 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">
-                    I typically respond to messages within 24 hours. For urgent matters, 
+                    I typically respond to messages within 24 hours in mail. For urgent matters, 
                     please mention "URGENT" in your subject line.
                   </p>
                 </CardContent>

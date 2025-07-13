@@ -1,104 +1,142 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, Music, Video, Book, Play, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Music, Video, Book, Play, ExternalLink, Pause  } from 'lucide-react';
 import Link from 'next/link';
 import { Layout } from '@/components/layout/layout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useRef, useState } from 'react';
 
 const musicTracks = [
   {
-    id: 'midnight-dreams',
-    title: 'Midnight Dreams',
-    genre: 'Ambient',
-    duration: '4:32',
-    description: 'A soothing ambient track perfect for late-night contemplation',
-    color: 'from-blue-500 to-purple-500'
+    id: 'awaken',
+    title: 'Awaken',
+    genre: 'Classical & Ambient',
+    duration: '5:00',
+    description: 'An action rising ambient track perfect for octane scenes and intros',
+    color: 'from-blue-500 to-purple-500',
+    src:'/awaken.mp3'
+
   },
   {
-    id: 'digital-sunrise',
-    title: 'Digital Sunrise',
-    genre: 'Electronic',
-    duration: '3:45',
-    description: 'Uplifting electronic beats that capture the energy of a new day',
-    color: 'from-orange-500 to-pink-500'
+    id: '27',
+    title: '27',
+    genre: 'Electronic/ EDM',
+    duration: '3:36',
+    description: 'Uplifting electronic beats that starts & gets haunting on the go',
+    color: 'from-orange-500 to-pink-500',
+    src:'/27.mp3'
   },
   {
-    id: 'urban-pulse',
-    title: 'Urban Pulse',
-    genre: 'Hip-Hop',
-    duration: '3:28',
-    description: 'A rhythmic journey through the heartbeat of the city',
-    color: 'from-green-500 to-blue-500'
+    id: 'next-new',
+    title: 'Next New',
+    genre: 'EDM & Rock',
+    duration: '2:15',
+    description: 'A rhythmic intro with a blend of electronic and rock elements, shifting extremities',
+    color: 'from-green-500 to-blue-500',
+    src:'/nextnew.mp3'
   },
   {
-    id: 'ethereal-waves',
-    title: 'Ethereal Waves',
-    genre: 'Chillout',
-    duration: '5:12',
-    description: 'Flowing melodies that transport you to another dimension',
-    color: 'from-purple-500 to-indigo-500'
+    id: 'love-scene-cut',
+    title: 'Love Scene Cut',
+    genre: 'R&B & Soul',
+    duration: '0:53',
+    description: 'Cut version of a love scene track, where the tune meets emotion',
+    color: 'from-purple-500 to-indigo-500',
+    src:'/lovescenecut.mp3'
   },
   {
-    id: 'neon-nights',
-    title: 'Neon Nights',
-    genre: 'Synthwave',
-    duration: '4:08',
-    description: 'Retro-futuristic sounds inspired by 80s aesthetics',
-    color: 'from-pink-500 to-purple-500'
+    id: 'temperamental',
+    title: 'Temperamental',
+    genre: 'Hip Hop & EDM',
+    duration: '4:12',
+    description: 'An Octane & temperamental track that blends beats & cinematic transitions',
+    color: 'from-pink-500 to-purple-500',
+    src:'/temperamental.mp3'
   }
 ];
 
 const videoEdits = [
   {
-    id: 'tech-showcase',
-    title: 'Tech Innovation Showcase',
-    description: 'A dynamic presentation of cutting-edge technology trends'
+    id: 'the-office-ride',
+    title: 'The Office Ride',
+    description: 'First vlog in my bike (NS400Z). A simple ride to my office. Already reached there but just made a round and back to take vlog. No commentary. Just the sound.',
+    link:'https://www.youtube.com/watch?v=cntX-qe4lhc'
   },
   {
-    id: 'travel-memories',
-    title: 'Travel Memories Montage',
-    description: 'Cinematic compilation of beautiful travel destinations'
+    id: 'blend-ride-edit',
+    title: 'Blend Ride Edit',
+    description: 'A blend of commute rides with my favorite song edit.',
+    link:'https://youtu.be/kOlHD_pGoNI'
   },
   {
-    id: 'music-visualizer',
-    title: 'Music Visualizer Experience',
-    description: 'Abstract visual interpretation of musical compositions'
+    id: 'vertical-ride-edit',
+    title: 'Vertical Ride Edit',
+    description: 'A vertical ride edit of three office commutes with my favorite song, capturing the ride frpm home to all the way to office.',
+    link:'https://youtube.com/shorts/TzA3nJPblAc'
   },
   {
-    id: 'product-demo',
-    title: 'Product Demo Reel',
-    description: 'Professional showcase of product features and benefits'
-  },
-  {
-    id: 'event-highlights',
-    title: 'Event Highlights Package',
-    description: 'Capturing the best moments from special events'
+    id: 'a-love-story',
+    title: 'A Love Story',
+    description: 'A Love Story edit featuring my "Venture". The music and dreamy effects resonate with the love that is - "Her".',
+    link:'https://youtu.be/XlpYcXbs_1A'
   }
 ];
 
 const storyBooks = [
   {
-    id: 'digital-dreams',
-    title: 'Digital Dreams',
-    description: 'A collection of short stories exploring the intersection of technology and humanity in the near future.',
+    id: 'in-the-action',
+    title: 'In The Action',
+    description: 'An action packed "lost love found again" story which takes huge twists and turns',
     image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400',
-    pages: 156,
-    genre: 'Science Fiction'
+    pages: 300,
+    genre: 'Action Romance'
   },
   {
-    id: 'whispers-of-time',
-    title: 'Whispers of Time',
-    description: 'An anthology of tales that weave through different eras, connecting past, present, and future through timeless human emotions.',
+    id: 'love-and-venture',
+    title: 'Love And Venture',
+    description: 'A Love Story revolving between two souls and a bike.',
     image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400',
-    pages: 203,
-    genre: 'Fantasy'
+    pages: 100,
+    genre: 'Adventure Romance'
   }
 ];
 
+// ✅ Correct
+
+
 export default function Creations() {
+
+
+   const audioRefs = useRef<Array<HTMLAudioElement | null>>([]);
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
+
+
+        const handleTogglePlay = (index: number) => {
+      const audio = audioRefs.current[index];
+      if (!audio) return;
+
+      if (playingIndex === index) {
+        // Track is playing → pause it
+        audio.pause();
+        setPlayingIndex(null);
+      } else {
+        // Stop previous track if needed
+        if (playingIndex !== null) {
+          const prevAudio = audioRefs.current[playingIndex];
+          prevAudio?.pause();
+          prevAudio!.currentTime = 0;
+        }
+        // Play selected track
+        audio.play();
+        setPlayingIndex(index);
+      }
+    };
+
+
   return (
     <Layout>
       <div className="py-20 min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
@@ -157,12 +195,31 @@ export default function Creations() {
                             </span>
                           </div>
                         </div>
-                        <Button size="sm" variant="ghost" className={`bg-gradient-to-r ${track.color} text-white hover:opacity-80`}>
-                          <Play className="h-4 w-4" />
-                        </Button>
+                        <Button
+                              size="sm"
+                              variant="ghost"
+                              onClick={() => handleTogglePlay(index)}
+                              className={`bg-gradient-to-r ${track.color} text-white hover:opacity-80`}
+                            >
+                              {playingIndex === index ? (
+                                <Pause className="h-4 w-4 transition-transform duration-300 transform hover:scale-110"
+ />
+                              ) : (
+                                <Play className="h-4 w-4 transition-transform duration-300 transform hover:scale-110"
+ />
+                              )}
+                            </Button>
                       </div>
                     </CardHeader>
                     <CardContent>
+                      {/* Hidden Audio Element */}
+                        <audio
+                          ref={el => (audioRefs.current[index] = el)}
+                          preload="auto"
+                        >
+                          <source src={track.src} type="audio/mpeg" />
+                          Your browser does not support the audio element.
+                        </audio>
                       <CardDescription className="text-gray-600 dark:text-gray-300">
                         {track.description}
                       </CardDescription>
@@ -182,7 +239,7 @@ export default function Creations() {
           >
             <div className="flex items-center mb-8">
               <Video className="h-8 w-8 text-purple-600 dark:text-purple-400 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Video Edits</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Video</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {videoEdits.map((video, index) => (
@@ -199,10 +256,12 @@ export default function Creations() {
                         <CardTitle className="text-lg text-gray-900 dark:text-white">
                           {video.title}
                         </CardTitle>
+                        <a href={video.link} target="_blank" rel="noopener noreferrer">
                         <Button size="sm" variant="outline">
                           <ExternalLink className="h-4 w-4 mr-2" />
                           View
                         </Button>
+                        </a>
                       </div>
                     </CardHeader>
                     <CardContent>
@@ -224,7 +283,7 @@ export default function Creations() {
           >
             <div className="flex items-center mb-8">
               <Book className="h-8 w-8 text-green-600 dark:text-green-400 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Story Books</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Literature</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {storyBooks.map((book, index) => (

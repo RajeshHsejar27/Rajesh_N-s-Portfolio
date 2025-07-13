@@ -17,14 +17,14 @@ export function Hero() {
   if (!mounted) return null;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section className="hero-section relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden inset-0 bg-white/40 dark:bg-black/30 z-0">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 dark:bg-blue-900 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-100 dark:bg-purple-900 rounded-full opacity-20 animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="blur-box container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,11 +34,11 @@ export function Hero() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Hi, I'm{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              <span className=" bg-clip-text bg-gradient-to-r text-black-900">
                 Rajesh N
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-black-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
               Software Engineer & Tech Enthusiast passionate about creating innovative solutions 
               with modern web technologies, cybersecurity, and AI.
             </p>

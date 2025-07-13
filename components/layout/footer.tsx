@@ -13,8 +13,7 @@ export function Footer() {
               {SITE_CONFIG.name}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
-              Software engineer passionate about creating innovative solutions with modern web technologies, 
-              cybersecurity, and AI. Always learning and building for the future.
+              Build modern web apps - Yes! Can make them secure - Yes! Can make it with AI functionality -Yes!
             </p>
             <div className="flex space-x-4">
               <a
@@ -80,10 +79,9 @@ export function Footer() {
               Expertise
             </h4>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-300">React & Next.js</li>
-              <li className="text-gray-600 dark:text-gray-300">Vue.js</li>
+              <li className="text-gray-600 dark:text-gray-300">FullStack w. MERN & Next.js</li>
               <li className="text-gray-600 dark:text-gray-300">Cybersecurity</li>
-              <li className="text-gray-600 dark:text-gray-300">AI & ML</li>
+              <li className="text-gray-600 dark:text-gray-300">Gen AI</li>
             </ul>
           </div>
         </div>
@@ -96,6 +94,9 @@ export function Footer() {
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 md:mt-0 flex items-center">
               Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> using Next.js & Tailwind CSS
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 md:mt-0 flex items-center">
+             Responsive viewing experience in all devices
             </p>
           </div>
         </div>

@@ -8,30 +8,31 @@ import { Layout } from '@/components/layout/layout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+
 const passions = [
   {
     id: 'writing',
     title: 'Writing Stories',
     icon: Pen,
     color: 'from-blue-500 to-indigo-500',
-    shortDesc: 'Crafting narratives that touch hearts and minds',
-    fullDesc: `Writing has always been my escape and my voice. Through stories, I explore the depths of human emotion, create worlds that exist only in imagination, and connect with readers on a profound level. Whether it's a short tale about everyday heroes or an epic fantasy adventure, each story is a piece of my soul translated into words. I believe that stories have the power to change perspectives, heal wounds, and inspire greatness. My writing journey began in childhood with simple diary entries and has evolved into a passion for creating meaningful narratives that resonate with universal human experiences.`
+    shortDesc: 'Bleeding ink that tells tales of imagination',
+    fullDesc: `Writing is the best expression of my thoughts and emotions. It allows me to create worlds, characters, and stories that resonate with readers. Whether it's fiction, poetry, or content, writing is my way of communicating complex ideas and feelings in a way that connects with others. I find joy in the process of drafting, editing, and refining my work until it feels just right. Writing has taught me discipline, creativity, and the power of words to inspire change and evoke emotions. It's not just a hobby; it's a passion that fuels my soul. I find joy whenever I take my pen and notebook or start to type out a story scene or dialogues. It is an out of the world feeling!`,
   },
   {
     id: 'music',
     title: 'Making Music',
     icon: Music,
     color: 'from-purple-500 to-pink-500',
-    shortDesc: 'Creating melodies that speak when words fall short',
-    fullDesc: `Music is the universal language that transcends all barriers. My journey with music production started as a hobby but quickly became a deep passion. I love experimenting with different genres - from ambient electronic soundscapes to energetic pop beats. Each track I create tells a story without words, conveying emotions that sometimes can't be expressed verbally. The process of layering sounds, crafting melodies, and finding the perfect rhythm is both meditative and exhilarating. Music has taught me patience, creativity, and the beauty of imperfection. It's my way of contributing to the soundtrack of people's lives.`
+    shortDesc: 'Creating music that reminiscences emotions',
+    fullDesc: `I love music. Whenever I want to imagine a scenario, I listen to my favorite song or music and imagine scenes with it. I tried experimenting with DAWs on how to produce music & got to learn few tricks that helped me create some tracks that I love to hear all the time. I want to create music as how I would love to hear it. It takes patience, mood & right ambience to produce an impactful music, which is hard for me, but still it is worth it when the output comes out exceeding my expectations.`
   },
   {
     id: 'biking',
     title: 'Riding Bike',
     icon: Bike,
     color: 'from-green-500 to-emerald-500',
-    shortDesc: 'Finding freedom and adventure on two wheels',
-    fullDesc: `There's something magical about the wind in your face and the road stretching endlessly ahead. Biking represents freedom to me - the ability to explore new places, challenge my physical limits, and find peace in motion. Whether it's a leisurely ride through city streets or an adventurous mountain trail, each journey teaches me something new about myself and the world around me. Biking has connected me with nature, improved my physical and mental health, and provided countless moments of pure joy. It's not just about the destination; it's about the journey, the people you meet along the way, and the stories you collect with every mile.`
+    shortDesc: 'Venturing on two wheels',
+    fullDesc: `There's something magical about the wind in your face and the road stretching endlessly ahead. Biking represents freedom to me - the ability to explore new places without public transport dependencies, challenge my physical limits, and find peace in motion. Whether it's a hectic ride through city streets or an adrenaline filled highway run, each ride teaches me something & whatever small thing I experience in each of it, that becomes a memory. Riding has connected me with nature, improved my physical and mental health, and provided countless moments of pure joy. It's not just about the destination; it's about the journey, the people you meet along the way, and the stories you collect with every mile.`
   },
   {
     id: 'helping',
@@ -39,15 +40,15 @@ const passions = [
     icon: Heart,
     color: 'from-red-500 to-rose-500',
     shortDesc: 'Making a positive impact in others\' lives',
-    fullDesc: `The greatest joy in life comes from lifting others up. My passion for helping people stems from a deep belief that we're all connected and that small acts of kindness can create ripple effects of positive change. Whether it's mentoring someone in their career, volunteering for community causes, or simply being there for a friend in need, I find purpose in service to others. This passion has shaped my approach to both personal and professional relationships. I believe that success is not just about personal achievements but about how many lives you've touched positively along the way. Every person helped is a step toward a better world.`
+    fullDesc: `The greatest joy in life comes from lifting others up. My passion for helping people stems from a deep belief that we're all connected and that small acts of kindness can create ripple effects of positive change. Whether it's mentoring someone in their career, volunteering for community causes, or simply being there for a friend in need, I find purpose in service to others. This passion has shaped my approach to both personal and professional relationships. I believe that success is not just about personal achievements but about how many lives you've touched positively along the way. Every person helped is a step toward a better world. At the end of the day, I feel fulfilled when I know that I have made a difference in someone's life, no matter how small it may seem.`
   },
   {
     id: 'content',
     title: 'Content Creation',
     icon: Video,
     color: 'from-orange-500 to-yellow-500',
-    shortDesc: 'Sharing knowledge and creativity with the world',
-    fullDesc: `In today's digital age, content creation has become my platform for sharing knowledge, creativity, and connecting with like-minded individuals. From educational tutorials to creative showcases, I love the process of ideating, creating, and sharing content that adds value to people's lives. This passion combines my technical skills with storytelling abilities, allowing me to educate, entertain, and inspire others. Content creation has taught me about audience engagement, visual storytelling, and the responsibility that comes with having a platform. It's exciting to see how a single piece of content can spark conversations, solve problems, or inspire someone to pursue their own creative journey.`
+    shortDesc: 'Sharing cretivity in my style',
+    fullDesc: `Creating content - either story, music, video edits, posts to have a mind of fulfillment as well as a potential entertainment for others is one thing I like to do, in my own style. I procrastinate a lot, but when I get the right mood, I create content that I feel is worth sharing. It could be a short video edit or a story picture of the day or a music track that I feel is worth sharing. I love to share my creativity with the world, and content creation allows me to do just that. Consuming content from others but not giving back is also something I don't like. I believe that sharing my creativity not only helps me grow as an individual but also inspires others to express themselves. It's not always about if others like it or not, but the joy of creating something unique and sharing it with the world is what drives me.`
   }
 ];
 

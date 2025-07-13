@@ -47,7 +47,7 @@ export default function About() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-600">
-                    I'm a passionate software engineer with a B.Tech degree and extensive experience 
+                    I'm a Professional engineer with a B.Tech degree in Computer Science & Engineering and extensive experience 
                     in building innovative web applications. My journey in technology began with a 
                     curiosity about how things work and has evolved into a career focused on creating 
                     meaningful solutions.
@@ -59,7 +59,7 @@ export default function About() {
                   </p>
                   <p className="text-gray-600">
                     When I'm not coding, you can find me exploring new technologies, contributing to 
-                    open-source projects, or working on personal projects that challenge me to grow 
+                    any entertaining content, or working on personal projects that challenge me to grow 
                     as a developer.
                   </p>
                 </CardContent>
@@ -78,16 +78,28 @@ export default function About() {
                 <CardContent className="space-y-6">
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Bachelor of Technology</h3>
-                    <p className="text-gray-600 mb-2">Computer Science Engineering</p>
+                    <p className="text-gray-600 mb-2">Computer Science & Engineering with Cyber Security</p>
                     <p className="text-sm text-gray-500">2019 - 2023</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Professional Experience</h3>
                     <p className="text-gray-600 mb-2">Full-Stack Developer</p>
-                    <p className="text-sm text-gray-500">2023 - Present</p>
+                    <p className="text-sm text-gray-500">2019 - Present</p>
                     <p className="text-sm text-gray-600 mt-2">
+                      Created & Deployed meaningful Full Stack projects with my learning and experience in web development.
+                      Building responsive and user-friendly web applications using React, Next.js, and Tailwind CSS.
                       Developing scalable web applications with modern frameworks and focusing on 
                       security best practices.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-gray-600 mb-2">Cyber Security Engineer</p>
+                    <p className="text-sm text-gray-500">2023 - Present</p>
+                    <p className="text-sm text-gray-600 mt-2">
+                      Providing L2, L2.5, L3 Support in IAM & IGA Solutions, ensuring secure access management and compliance.
+                      Integrated Gen AI with IAM & IGA solutions for business use cases.
+                      Training and mentoring junior engineers in IAM practices.
+                      Collaboration with cross-functional teams to provide deliverable solutions.
                     </p>
                   </div>
                 </CardContent>

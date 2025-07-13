@@ -54,11 +54,10 @@ export default function Unofficial() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              The Unofficial Me
+              The Unofficial Side
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Beyond the professional facade lies a world of creativity, passion, and stories. 
-              Explore the personal side of who I am.
+              Meet my RAW Version!
             </p>
           </motion.div>
 
@@ -93,7 +92,7 @@ export default function Unofficial() {
                           variant="ghost" 
                           className={`group-hover:bg-gradient-to-r ${section.color} group-hover:text-white transition-all duration-300`}
                         >
-                          Explore
+                          Explore!
                         </Button>
                       </CardContent>
                     </Card>

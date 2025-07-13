@@ -19,7 +19,7 @@ const hobbies = [
   {
     id: 'music',
     title: 'Music Production',
-    description: 'Creating melodies and beats that resonate with emotions, experimenting with different genres and sounds.',
+    description: 'Creating tracks that resonate with emotions, experimenting with different genres and sounds using Digital Audio Workstations (DAWs).',
     icon: Music,
     image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'from-purple-500 to-pink-500'
@@ -49,13 +49,21 @@ const hobbies = [
     color: 'from-indigo-500 to-purple-500'
   },
   {
-    id: 'art',
-    title: 'Digital Art',
-    description: 'Creating visual masterpieces using digital tools, blending traditional art techniques with modern technology.',
-    icon: Palette,
+    id: 'writing',
+    title: 'Writing',
+    description: 'Crafting narratives and stories that captivate readers, letting them venture into a world of imagination.',
+    icon: Book, // Changed from Palette to Book for writing icon
     image: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'from-pink-500 to-rose-500'
-  }
+    },
+    {
+    id: 'riding',
+    title: 'Riding',
+    description: 'Exploring the world on two wheels, experiencing the freedom and thrill of the open road.',
+    icon: Palette, // Replace with Bike icon if available in lucide-react
+    image: 'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=800',
+    color: 'from-lime-500 to-green-500'
+    },
 ];
 
 export default function Hobbies() {
