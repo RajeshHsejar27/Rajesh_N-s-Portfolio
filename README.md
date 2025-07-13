@@ -486,7 +486,7 @@ export function sanitizeHtml(html: string): string {
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/RajeshHsejar27/portfolio.git
+   git clone https://github.com/RajeshHsejar27/Rajesh_N-s-Portfolio.git
    cd portfolio
    ```
 
