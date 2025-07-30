@@ -44,7 +44,7 @@ export const PROJECTS = [
     tech: ['React', 'TypeScript', 'Web Crypto API', 'Tailwind CSS'],
     github: 'https://github.com/RajeshHsejar27/Crypto-lab-web-application-using-React-TypeScript-CryptographicLibraries',
     live: 'https://cryptolab-encrypt-decrypt.netlify.app/',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/1.png',
     category: 'security'
   },
   {
@@ -54,7 +54,7 @@ export const PROJECTS = [
     tech: ['Next.js', 'React 18', 'TypeScript', 'Tailwind CSS'],
     github: 'https://github.com/RajeshHsejar27/BlogCMS-using-Next.js',
     live: 'https://the-venture-blog.netlify.app/',
-    image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/2.png',
     category: 'web'
   },
   {
@@ -64,7 +64,17 @@ export const PROJECTS = [
     tech: ['Tkinter', 'GPT4All', 'ReportLab', 'Python'],
     github: 'https://github.com/RajeshHsejar27/Document-Generator-Python-App-using-LLM-Models-and-Tkinter',
     live: 'https://github.com/RajeshHsejar27/Document-Generator-Python-App-using-LLM-Models-and-Tkinter',
-    image: 'https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/3.png',
     category: 'ai'
+  },
+  {
+    id: 'xpense-tracker',
+    title: 'Xpense Tracker',
+    description: 'A personal expense tracking application with browser localstorage persist functionality that helps users manage their finances by logging & exporting expenses, categorizing them, and providing insights through visualizations.',
+    tech: ['React', 'TypeScript', 'Node.js', 'LocalStorage'],
+    github: 'https://github.com/RajeshHsejar27/Expense-tracker-using-React-TypeScript-TailwindCSS',
+    live: 'https://xpense-tracker-manager.netlify.app/',
+    image: '/4.png',
+    category: 'web'
   }
 ];
