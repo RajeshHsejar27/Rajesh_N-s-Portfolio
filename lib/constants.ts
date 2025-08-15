@@ -76,5 +76,16 @@ export const PROJECTS = [
     live: 'https://xpense-tracker-manager.netlify.app/',
     image: '/4.png',
     category: 'web'
+  },
+  {
+    id: 'utility-hub',
+    title: 'Utility Hub',
+    description: 'A cool simple destination for essential web utilities like live Weather, Counter, Basic & Advanced Calculator, Calendar.',
+    tech: ['React', 'TypeScript', 'Node.js', 'LocalStorage'],
+    github: 'https://github.com/RajeshHsejar27/Utility-application-using-React-TypeScript-Vite-TailwindCSS',
+    live: 'https://utility-application.netlify.app/',
+    image: '/5.png',
+    category: 'web'
   }
+
 ];
