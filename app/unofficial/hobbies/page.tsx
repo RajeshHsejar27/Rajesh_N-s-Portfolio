@@ -53,7 +53,7 @@ const hobbies = [
     title: 'Writing',
     description: 'Crafting narratives and stories that captivate readers, letting them venture into a world of imagination.',
     icon: Book, // Changed from Palette to Book for writing icon
-    image: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/606541/pexels-photo-606541.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'from-pink-500 to-rose-500'
     },
     {
@@ -61,7 +61,7 @@ const hobbies = [
     title: 'Riding',
     description: 'Exploring the world on two wheels, experiencing the freedom and thrill of the open road.',
     icon: Palette, // Replace with Bike icon if available in lucide-react
-    image: 'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/2965353/pexels-photo-2965353.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'from-lime-500 to-green-500'
     },
 ];

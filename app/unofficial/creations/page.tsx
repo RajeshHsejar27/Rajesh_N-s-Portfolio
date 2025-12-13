@@ -60,6 +60,18 @@ const musicTracks = [
 
 const videoEdits = [
   {
+    id: 'the-intro',
+    title: 'Introduction Edit',
+    description: 'An intro video edit showcasing my bike "Venture" with cinematic shots and smooth transitions (along with me); Practiced & Made it with Davinci Resolve ProfessionalVideo Editor.',
+    link:'https://youtu.be/xUHRs9lEr2I'
+  },
+  {
+    id: 'the-intro-extended',
+    title: 'Introduction Edit (Extended)',
+    description: 'An extended version of an intro video edit showcasing my bike "Venture" with cinematic shots and smooth transitions (along with me).',
+    link:'https://youtu.be/F2iyvikrpdU'
+  },
+  {
     id: 'the-office-ride',
     title: 'The Office Ride',
     description: 'First vlog in my bike (NS400Z). A simple ride to my office. Already reached there but just made a round and back to take vlog. No commentary. Just the sound.',
@@ -87,18 +99,26 @@ const videoEdits = [
 
 const storyBooks = [
   {
+    id: 'fire-and-amulets',
+    title: 'Fire & Amulets (2026)',
+    description: 'A story revolving around a girl who wants her life to get interesting and gets to live it with unexpected twists and turns.',
+    image: 'https://images.pexels.com/photos/19185660/pexels-photo-19185660.jpeg?auto=compress&cs=tinysrgb&w=400',
+    pages: 300,
+    genre: 'Action Romance'
+  },
+  {
     id: 'in-the-action',
-    title: 'In The Action',
+    title: 'In The Action (2026)',
     description: 'An action packed "lost love found again" story which takes huge twists and turns',
-    image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://images.pexels.com/photos/68705/pexels-photo-68705.jpeg?auto=compress&cs=tinysrgb&w=400',
     pages: 300,
     genre: 'Action Romance'
   },
   {
     id: 'love-and-venture',
-    title: 'Love And Venture',
+    title: 'Love And Venture (2026)',
     description: 'A Love Story revolving between two souls and a bike.',
-    image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://images.pexels.com/photos/9606839/pexels-photo-9606839.jpeg?auto=compress&cs=tinysrgb&w=400',
     pages: 100,
     genre: 'Adventure Romance'
   }
@@ -157,7 +177,7 @@ export default function Creations() {
               My Creations
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
-              A showcase of my artistic endeavors across music, video, and literature.
+              A showcase of my artistic endeavors across music, video, and literature. I create music with DAW like FL Studio & Music Maker JAM. I edit videos with VN Video Editor & Davinci Resolve. I write stories and narratives that attempts to make the readers live through the pages.
             </p>
           </motion.div>
 
@@ -318,7 +338,7 @@ export default function Creations() {
                             {book.description}
                           </CardDescription>
                           <Button className="mt-4" variant="outline">
-                            Read Sample
+                            Read Sample (Not available)
                           </Button>
                         </CardContent>
                       </div>
