@@ -12,7 +12,7 @@ import { PROJECTS } from '@/lib/constants';
 export default function Projects() {
   const [filter, setFilter] = useState('all');
   
-  const categories = ['all', 'security', 'ai', 'web'];
+  const categories = ['all','systems','security', 'ai', 'web'];
   
   const filteredProjects = filter === 'all' 
     ? PROJECTS 
@@ -32,8 +32,8 @@ export default function Projects() {
               My Projects
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A collection of projects showcasing my skills in web development, 
-              cybersecurity, and AI technologies.
+              A collection of projects showcasing my skills in Systems, Web development, 
+              Cybersecurity and AI technologies.
             </p>
           </motion.div>
 

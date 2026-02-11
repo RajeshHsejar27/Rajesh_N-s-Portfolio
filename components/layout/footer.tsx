@@ -13,7 +13,7 @@ export function Footer() {
               {SITE_CONFIG.name}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
-              Build modern web apps - Yes! Can make them secure - Yes! Can make it with AI functionality -Yes!
+              ✨ Jack of All Trades; Master of One! ✨
             </p>
             <div className="flex space-x-4">
               <a
@@ -60,11 +60,11 @@ export function Footer() {
                   Projects
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/unofficial" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                   Unofficial
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                   Contact
@@ -79,8 +79,9 @@ export function Footer() {
               Expertise
             </h4>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-300">FullStack w. MERN & Next.js</li>
-              <li className="text-gray-600 dark:text-gray-300">Cybersecurity</li>
+              <li className="text-gray-600 dark:text-gray-300">Software development</li>
+              <li className="text-gray-600 dark:text-gray-300">FullStack development</li>
+              <li className="text-gray-600 dark:text-gray-300">Cyber Security</li>
               <li className="text-gray-600 dark:text-gray-300">Gen AI</li>
             </ul>
           </div>
@@ -93,7 +94,7 @@ export function Footer() {
               © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 md:mt-0 flex items-center">
-              Made with <Heart className="h-4 w-4 text-red-500 mx-1" /> using Next.js & Tailwind CSS
+               <Heart className="h-4 w-4 text-red-500 mx-1" /> 
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm mt-4 md:mt-0 flex items-center">
              Responsive viewing experience in all devices

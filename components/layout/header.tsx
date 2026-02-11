@@ -13,7 +13,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Unofficial', href: '/unofficial' },
+  // { name: 'Unofficial', href: '/unofficial' },
   { name: 'Contact', href: '/contact' }
 ];
 
@@ -74,7 +74,7 @@ export function Header() {
               asChild
               aria-label="GitHub profile"
             >
-              <a href={SITE_CONFIG.links.github} target="_blank" rel="noopener noreferrer">
+              {/* <a href={SITE_CONFIG.links.github} target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
@@ -96,7 +96,7 @@ export function Header() {
             >
               <a href={`mailto:${SITE_CONFIG.links.email}`}>
                 <Mail className="h-5 w-5" />
-              </a>
+              </a> */}
             </Button>
           </div>
 
@@ -135,7 +135,7 @@ export function Header() {
                 <CreativeThemeToggle />
               </div>
               <div className="flex items-center space-x-4 px-3 py-2">
-                <a 
+                {/* <a 
                   href={SITE_CONFIG.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -159,7 +159,7 @@ export function Header() {
                   aria-label="Send email"
                 >
                   <Mail className="h-5 w-5" />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

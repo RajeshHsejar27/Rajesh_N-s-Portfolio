@@ -1,4 +1,43 @@
 import { IconType } from "react-icons";
+import { ComponentType } from "react";
+
+import {
+  CursorIcon,
+  CopilotIcon,
+  ChatGPTIcon,
+  N8nIcon,
+  MicrosoftAzureIcon,
+  AzureDevOpsIcon,
+  PowerShellIcon,
+  MongoDBIcon,
+  MySQLIcon,
+  CockroachDBIcon,
+  AmazonAuroraIcon,
+  DynamoDBIcon,
+  FirestoreIcon,
+  CassandraIcon,
+  Neo4jIcon,
+  ElasticsearchIcon,
+  BigQueryIcon,
+  ParquetIcon,
+  AzureBlobIcon,
+  SailPointIcon,
+  CyberArkIcon,
+  ClaudeIcon,
+  GeminiIcon,
+  FAISSIcon,
+  ChromaIcon,
+  OpenSearchIcon,
+  LangChainIcon,
+  StreamlitIcon,
+  ChainlitIcon,
+  OllamaIcon,
+  GPT4AllIcon,
+  PowerBIIcon,
+  DaVinciResolveIcon,
+  FLStudioIcon,
+  PrometheusIcon,
+} from "@/components/about/custom-icons";
 
 import {
   SiReact,
@@ -13,8 +52,7 @@ import {
   SiNodedotjs,
   SiGit,
   SiGithub,
-  SiMongodb,
-  SiMysql,
+
   SiPostman,
   SiBootstrap,
   SiWebpack,
@@ -41,14 +79,19 @@ import {
   SiFirebase,
   SiOkta,
   SiChartdotjs,
+  SiPostgresql,
+  SiRedis,
+  SiApachekafka,      // Kafka
+  SiRabbitmq,         // RabbitMQ
+  SiOpenai,         // OpenAI / LLM APIs
 } from "react-icons/si";
 
-// 👇 Define the type
+
 export type Skill = {
   name: string;
   level: number;
   category: string;
-  icon?: IconType; // optional icon
+  icon?: IconType | ComponentType<any>; // optional icon
 };
 
 export const SITE_CONFIG = {
@@ -64,227 +107,95 @@ export const SITE_CONFIG = {
   }
 };
 
-// export const SKILLS = [
-//   { name: 'React.js', level: 75, category: 'Libraries' },
-//   { name: 'Next.js', level: 75, category: 'Frameworks' },
-//   { name: 'FastAPI', level: 70, category: 'Frameworks' },
-//   { name: 'Data Structures & Algorithms', level: 80, category: 'Technical skills' },
-//   { name: 'System Design', level: 90, category: 'Technical skills' },
-//   { name: 'Operating Systems', level: 70, category: 'Technical skills' },
-//   { name: 'Object Oriented Programming', level: 70, category: 'Technical skills' },
-//   { name: 'Database Management Systems', level: 90, category: 'Technical skills' },
-//   { name: 'Software Engineering', level: 90, category: 'Technical skills' },
-//   { name: 'LangChain', level: 70, category: 'Frameworks' },
-//   { name: 'Django', level: 70, category: 'Frameworks' },
-//   { name: 'Ruby on Rails', level: 65, category: 'Frameworks' },
-//   { name: 'Gin', level: 50, category: 'Frameworks' },
-//   { name: 'Actix Web', level: 65, category: 'Frameworks' },
-//   { name: 'Rocket', level: 70, category: 'Frameworks' },
-//   { name: 'Phoenix', level: 65, category: 'Frameworks' },
-//   { name: 'Spring Boot', level: 60, category: 'Frameworks' },
-//   { name: 'IdAM', level: 99, category: 'Security' },
-//   { name: 'TypeScript', level: 80, category: 'Languages' },
-//   { name: 'HTML', level: 95, category: 'Languages' },
-//   { name: 'CSS/ Tailwind CSS', level: 95, category: 'Languages' },
-//   { name: 'Node.js', level: 70, category: 'Web dev tools' },
-//   { name: 'VS Code', level: 80, category: 'Web dev tools' },
-//   { name: 'Git', level: 80, category: 'Web dev tools' },
-//   { name: 'Github', level: 90, category: 'Web dev tools' },
-//   { name: 'Mongodb', level: 95, category: 'Database' },
-//   { name: 'MySQL', level: 95, category: 'Database' },
-//   { name: 'Postman', level: 95, category: 'Web dev tools' },
-//   { name: 'Bootstrap', level: 95, category: 'Web dev tools' },
-//   { name: 'Webpack', level: 85, category: 'Web dev tools' },
-//   { name: 'ESLint', level: 80, category: 'Web dev tools' },
-//   { name: 'Docker', level: 75, category: 'Web dev tools' },
-//   { name: 'Kubernetes', level: 80, category: 'Web dev tools' },
-//   { name: 'Jenkins', level: 65, category: 'Web dev tools' },
-//   { name: 'Figma', level: 80, category: 'Web dev tools' },
-//   { name: 'IGA', level: 99, category: 'Security' },
-//   { name: 'Cloud Security', level: 95, category: 'Security' },
-//   { name: 'Forensics', level: 70, category: 'Security' },
-//   { name: 'Pen Testing', level: 70, category: 'Security' },
-//   { name: 'Python', level: 90, category: 'Languages' },
-//   { name: 'Javascript', level: 90, category: 'Languages' },
-//   { name: 'Java', level: 80, category: 'Languages' },
-//   { name: 'Generative AI', level: 75, category: 'AI' },
-//   { name: 'Prompt Engineering', level: 90, category: 'AI' },
-//   { name: 'Accessibility', level: 90, category: 'UX' },
-//   { name: 'Responsive Design', level: 95, category: 'UX' },
-//   { name: 'Arduino DIY', level: 75, category: 'IoT' },
-//   { name: 'Go', level: 70, category: 'Languages' },
-//   { name: 'Rust', level: 70, category: 'Languages' },
-//   { name: 'Ruby', level: 70, category: 'Languages' },
-//   { name: 'C', level: 70, category: 'Languages' },
-//   { name: 'C++', level: 70, category: 'Languages' },
-//   { name: 'Pandas', level: 85, category: 'Libraries' },
-//   { name: 'NumPy', level: 85, category: 'Libraries' },
-//   { name: 'Matplotlib', level: 80, category: 'Libraries' },
-//   { name: 'Express.js', level: 80, category: 'Libraries' },
-//   { name: 'jQuery', level: 90, category: 'Libraries' },
-//   { name: 'VM Ware', level: 80, category: 'Tech tools' },
-//   { name: 'M365 Apps', level: 80, category: 'Tech tools' },
-//   { name: 'Google Suite', level: 80, category: 'Tech tools' },
-//   { name: 'Powershell Scripting', level: 85, category: 'Tech tools' },
-//   { name: 'Davinci Resolve', level: 70, category: 'Tech tools' },
-//   { name: 'FL Studio', level: 70, category: 'Tech tools' },
-//   { name: 'Chart.js', level: 70, category: 'Libraries' },
-//   { name: 'AWS', level: 70, category: 'Cloud Platforms' },
-//   { name: 'GCP', level: 70, category: 'Cloud Platforms' },
-//   { name: 'Netlify', level: 70, category: 'Cloud Platforms' },
-//   { name: 'Firebase', level: 70, category: 'Cloud Platforms' },
-//   { name: 'OKTA', level: 99, category: 'Cloud Platforms' },
-//   { name: 'Sailpoint', level: 80, category: 'Cloud Platforms' },
-//   { name: 'CyberArk', level: 70, category: 'Cloud Platforms' },
-//   { name: 'Sci-kit Learn', level: 65, category: 'Libraries' },
-//   { name: 'Deep Learning', level: 65, category: 'ML' },
 
-// ];
-
-
-// export const SKILLS: Skill[] = [
-//   { name: "React.js", level: 75, category: "Libraries", icon: SiReact },
-//   { name: "Next.js", level: 75, category: "Frameworks", icon: SiNextdotjs },
-//   { name: "FastAPI", level: 70, category: "Frameworks", icon: SiFastapi },
-//   { name: "Django", level: 70, category: "Frameworks", icon: SiDjango },
-//   { name: "Ruby on Rails", level: 65, category: "Frameworks", icon: SiRubyonrails },
-//   { name: "Spring Boot", level: 60, category: "Frameworks", icon: SiSpringboot },
-//   { name: "TypeScript", level: 80, category: "Languages", icon: SiTypescript },
-//   { name: "HTML", level: 95, category: "Languages", icon: SiHtml5 },
-//   { name: "CSS/ Tailwind CSS", level: 95, category: "Languages", icon: SiTailwindcss },
-//   { name: "Node.js", level: 70, category: "Web dev tools", icon: SiNodedotjs },
-//   { name: "VS Code", level: 80, category: "Web dev tools", icon: SiVisualstudiocode },
-//   { name: "Git", level: 80, category: "Web dev tools", icon: SiGit },
-//   { name: "Github", level: 90, category: "Web dev tools", icon: SiGithub },
-//   { name: "Mongodb", level: 95, category: "Database", icon: SiMongodb },
-//   { name: "MySQL", level: 95, category: "Database", icon: SiMysql },
-//   { name: "Postman", level: 95, category: "Web dev tools", icon: SiPostman },
-//   { name: "Bootstrap", level: 95, category: "Web dev tools", icon: SiBootstrap },
-//   { name: "Webpack", level: 85, category: "Web dev tools", icon: SiWebpack },
-//   { name: "ESLint", level: 80, category: "Web dev tools", icon: SiEslint },
-//   { name: "Docker", level: 75, category: "Web dev tools", icon: SiDocker },
-//   { name: "Kubernetes", level: 80, category: "Web dev tools", icon: SiKubernetes },
-//   { name: "Jenkins", level: 65, category: "Web dev tools", icon: SiJenkins },
-//   { name: "Figma", level: 80, category: "Web dev tools", icon: SiFigma },
-//   { name: "Python", level: 90, category: "Languages", icon: SiPython },
-//   { name: "Javascript", level: 90, category: "Languages", icon: SiJavascript },
-//   { name: "Java", level: 80, category: "Languages", icon: SiJava },
-//   { name: "Go", level: 70, category: "Languages", icon: SiGo },
-//   { name: "Rust", level: 70, category: "Languages", icon: SiRust },
-//   { name: "Ruby", level: 70, category: "Languages", icon: SiRuby },
-//   { name: "C", level: 70, category: "Languages", icon: SiC },
-//   { name: "C++", level: 70, category: "Languages", icon: SiCplusplus },
-//   { name: "Pandas", level: 85, category: "Libraries", icon: SiPandas },
-//   { name: "NumPy", level: 85, category: "Libraries", icon: SiNumpy },
-//   { name: "Express.js", level: 80, category: "Libraries", icon: SiExpress },
-//   { name: "jQuery", level: 90, category: "Libraries", icon: SiJquery },
-//   { name: "VM Ware", level: 80, category: "Tech tools", icon: SiVmware },
-//   { name: "M365 Apps", level: 80, category: "Tech tools", icon: SiMicrosoft },
-//   { name: "Google Suite", level: 80, category: "Tech tools", icon: SiGoogle },
-//   { name: "Powershell Scripting", level: 85, category: "Tech tools", icon: SiPowershell },
-//   { name: "AWS", level: 70, category: "Cloud Platforms", icon: SiAmazonaws },
-//   { name: "GCP", level: 70, category: "Cloud Platforms", icon: SiGooglecloud },
-//   { name: "Netlify", level: 70, category: "Cloud Platforms", icon: SiNetlify },
-//   { name: "Firebase", level: 70, category: "Cloud Platforms", icon: SiFirebase },
-//   { name: "OKTA", level: 99, category: "Cloud Platforms", icon: SiOkta },
-//   { name: "Sailpoint", level: 80, category: "Cloud Platforms", icon: SiSailpoint },
-//   { name: "Chart.js", level: 70, category: "Libraries", icon: SiChartdotjs },
-//   // Skills without icons can stay as they are
-// ];
 
 
 
 export const SKILLS: Skill[] = [
-  // Libraries / Frameworks / Technical skills / Languages / Tools / Security / AI / UX / IoT / Cloud
-  { name: "React.js", level: 75, category: "Libraries", icon: SiReact },
-  { name: "Next.js", level: 75, category: "Frameworks", icon: SiNextdotjs },
-  { name: "FastAPI", level: 70, category: "Frameworks", icon: SiFastapi },
-  { name: "LangChain", level: 70, category: "Frameworks" }, // no official icon
-  { name: "Django", level: 70, category: "Frameworks", icon: SiDjango },
-  { name: "Ruby on Rails", level: 65, category: "Frameworks", icon: SiRubyonrails },
-  { name: "Gin", level: 50, category: "Frameworks" }, // no official icon
-  { name: "Actix Web", level: 65, category: "Frameworks" }, // no official icon
-  { name: "Rocket", level: 70, category: "Frameworks" }, // no official icon
-  { name: "Phoenix", level: 65, category: "Frameworks" }, // no official icon
-  { name: "Spring Boot", level: 60, category: "Frameworks", icon: SiSpringboot },
+  // --- Generative AI & LLM Tooling ---
+  { name: "Cursor (AI IDE)", level: 90, category: "Gen AI Tooling", icon: CursorIcon },
+  { name: "GitHub Copilot", level: 90, category: "Gen AI Tooling", icon: CopilotIcon },
+  { name: "ChatGPT", level: 95, category: "Gen AI Tooling", icon: ChatGPTIcon },
+  { name: "Claude", level: 75, category: "Gen AI Tooling", icon: ClaudeIcon },
+  { name: "Gemini", level: 75, category: "Gen AI Tooling", icon: GeminiIcon },
+  { name: "Ollama", level: 80, category: "Gen AI Tooling", icon: OllamaIcon },
+  { name: "GPT4All", level: 80, category: "Gen AI Tooling", icon: GPT4AllIcon },
+  { name: "n8n Automation", level: 95, category: "Gen AI Tooling", icon: N8nIcon },
 
-  { name: "Data Structures & Algorithms", level: 80, category: "Technical skills" },
-  { name: "System Design", level: 90, category: "Technical skills" },
-  { name: "Operating Systems", level: 70, category: "Technical skills" },
-  { name: "Object Oriented Programming", level: 70, category: "Technical skills" },
-  { name: "Database Management Systems", level: 90, category: "Technical skills" },
-  { name: "Software Engineering", level: 90, category: "Technical skills" },
+  // --- AI Frameworks & Concepts ---
+  { name: "LangChain", level: 85, category: "AI Frameworks", icon: LangChainIcon },
+  { name: "Streamlit", level: 85, category: "AI Frameworks", icon: StreamlitIcon },
+  { name: "Chainlit", level: 80, category: "AI Frameworks", icon: ChainlitIcon },
+  { name: "Agentic Workflows", level: 85, category: "AI Concepts" }, // Text only
+  { name: "RAG Pipelines", level: 80, category: "AI Concepts" },     // Text only
+  { name: "Vector Databases", level: 75, category: "AI Concepts" },  // Text only
+  { name: "AI Guardrails", level: 85, category: "AI Concepts" },     // Text only
 
-  { name: "IdAM", level: 99, category: "Security" }, // domain-specific, no icon
-  { name: "IGA", level: 99, category: "Security" }, // domain-specific, no icon
-  { name: "Cloud Security", level: 95, category: "Security" },
-  { name: "Forensics", level: 70, category: "Security" },
-  { name: "Pen Testing", level: 70, category: "Security" },
+  // --- Identity & Security (IdAM) ---
+  { name: "IdAM / IGA", level: 99, category: "Identity & Security" }, // Combined Domain Expertise
+  { name: "SailPoint", level: 85, category: "Identity & Security", icon: SailPointIcon },
+  { name: "CyberArk", level: 80, category: "Identity & Security", icon: CyberArkIcon },
+  { name: "Okta", level: 99, category: "Identity & Security", icon: SiOkta },
+  { name: "Cloud Security", level: 95, category: "Identity & Security" },
+  { name: "Pen Testing", level: 70, category: "Identity & Security" },
 
+  // --- Languages ---
   { name: "TypeScript", level: 80, category: "Languages", icon: SiTypescript },
-  { name: "HTML", level: 95, category: "Languages", icon: SiHtml5 },
-  { name: "CSS/ Tailwind CSS", level: 95, category: "Languages", icon: SiTailwindcss },
   { name: "Python", level: 90, category: "Languages", icon: SiPython },
-  { name: "Javascript", level: 90, category: "Languages", icon: SiJavascript },
-  { name: "Java", level: 80, category: "Languages" },
+  { name: "JavaScript", level: 90, category: "Languages", icon: SiJavascript },
+  { name: "Java", level: 80, category: "Languages" }, // No icon in Si for standard Java usually, or use generic
   { name: "Go", level: 70, category: "Languages", icon: SiGo },
   { name: "Rust", level: 70, category: "Languages", icon: SiRust },
-  { name: "Ruby", level: 70, category: "Languages", icon: SiRuby },
-  { name: "C", level: 70, category: "Languages", icon: SiC },
   { name: "C++", level: 70, category: "Languages", icon: SiCplusplus },
+  { name: "PowerShell", level: 90, category: "Languages", icon: PowerShellIcon },
+  { name: "HTML5", level: 95, category: "Languages", icon: SiHtml5 },
+  { name: "CSS3 / Tailwind", level: 95, category: "Languages", icon: SiTailwindcss },
 
-  { name: "Data Visualization (Matplotlib)", level: 80, category: "Libraries" }, // no icon
-  { name: "Pandas", level: 85, category: "Libraries", icon: SiPandas },
-  { name: "NumPy", level: 85, category: "Libraries", icon: SiNumpy },
-  { name: "Sci-kit Learn", level: 65, category: "Libraries" }, // no icon
-  { name: "Chart.js", level: 70, category: "Libraries", icon: SiChartdotjs },
-  { name: "Express.js", level: 80, category: "Libraries", icon: SiExpress },
-  { name: "jQuery", level: 90, category: "Libraries", icon: SiJquery },
+  // --- Frameworks ---
+  { name: "React.js", level: 75, category: "Frameworks", icon: SiReact },
+  { name: "Next.js", level: 75, category: "Frameworks", icon: SiNextdotjs },
+  { name: "FastAPI", level: 70, category: "Frameworks", icon: SiFastapi },
+  { name: "Django", level: 70, category: "Frameworks", icon: SiDjango },
+  { name: "Spring Boot", level: 60, category: "Frameworks", icon: SiSpringboot },
+  { name: "Express.js", level: 80, category: "Frameworks", icon: SiExpress },
 
-  { name: "Node.js", level: 70, category: "Web dev tools", icon: SiNodedotjs },
-  { name: "VS Code", level: 80, category: "Web dev tools"},
-  { name: "Git", level: 80, category: "Web dev tools", icon: SiGit },
-  { name: "Github", level: 90, category: "Web dev tools", icon: SiGithub },
-  { name: "Postman", level: 95, category: "Web dev tools", icon: SiPostman },
-  { name: "Bootstrap", level: 95, category: "Web dev tools", icon: SiBootstrap },
-  { name: "Webpack", level: 85, category: "Web dev tools", icon: SiWebpack },
-  { name: "ESLint", level: 80, category: "Web dev tools", icon: SiEslint },
-  { name: "Docker", level: 75, category: "Web dev tools", icon: SiDocker },
-  { name: "Kubernetes", level: 80, category: "Web dev tools", icon: SiKubernetes },
-  { name: "Jenkins", level: 65, category: "Web dev tools", icon: SiJenkins },
-  { name: "Figma", level: 80, category: "Web dev tools", icon: SiFigma },
+  // --- Databases & Storage ---
+  { name: "PostgreSQL", level: 70, category: "Databases", icon: SiPostgresql },
+  { name: "MongoDB", level: 85, category: "Databases", icon: MongoDBIcon },
+  { name: "Redis", level: 70, category: "Databases", icon: SiRedis },
+  { name: "Elasticsearch", level: 75, category: "Databases", icon: ElasticsearchIcon },
+  { name: "OpenSearch", level: 70, category: "Databases", icon: OpenSearchIcon },
+  { name: "Neo4j", level: 65, category: "Databases", icon: Neo4jIcon },
+  { name: "Cassandra", level: 65, category: "Databases", icon: CassandraIcon },
+  { name: "DynamoDB", level: 70, category: "Databases", icon: DynamoDBIcon },
+  { name: "FAISS", level: 75, category: "Databases", icon: FAISSIcon },
+  { name: "Chroma", level: 75, category: "Databases", icon: ChromaIcon },
 
-  { name: "VM Ware", level: 80, category: "Tech tools", icon: SiVmware },
-  { name: "M365 Apps", level: 80, category: "Tech tools" },
-  { name: "Google Suite", level: 80, category: "Tech tools", icon: SiGoogle },
-  { name: "Powershell Scripting", level: 85, category: "Tech tools"},
-  { name: "Davinci Resolve", level: 70, category: "Tech tools" },
-  { name: "FL Studio", level: 70, category: "Tech tools" },
+  // --- Cloud & DevOps ---
+  { name: "AWS", level: 70, category: "Cloud & DevOps" }, // Add SiAws if available or keep text
+  { name: "Microsoft Azure", level: 90, category: "Cloud & DevOps", icon: MicrosoftAzureIcon },
+  { name: "GCP", level: 70, category: "Cloud & DevOps", icon: SiGooglecloud },
+  { name: "Azure DevOps", level: 85, category: "Cloud & DevOps", icon: AzureDevOpsIcon },
+  { name: "Docker", level: 75, category: "Cloud & DevOps", icon: SiDocker },
+  { name: "Kubernetes", level: 80, category: "Cloud & DevOps", icon: SiKubernetes },
+  { name: "Jenkins", level: 65, category: "Cloud & DevOps", icon: SiJenkins },
+  { name: "Prometheus", level: 75, category: "Cloud & DevOps", icon: PrometheusIcon },
+  { name: "Kafka", level: 95, category: "Cloud & DevOps", icon: SiApachekafka },
 
-  { name: "AWS", level: 70, category: "Cloud Platforms"},
-  { name: "GCP", level: 70, category: "Cloud Platforms", icon: SiGooglecloud },
-  { name: "Netlify", level: 70, category: "Cloud Platforms", icon: SiNetlify },
-  { name: "Firebase", level: 70, category: "Cloud Platforms", icon: SiFirebase },
-  { name: "OKTA", level: 99, category: "Cloud Platforms", icon: SiOkta },
-  { name: "Sailpoint", level: 80, category: "Cloud Platforms"},
-  { name: "CyberArk", level: 70, category: "Cloud Platforms" }, // no official icon in react-icons
+  // --- Tools & Analytics ---
+  { name: "Git & GitHub", level: 90, category: "Tools", icon: SiGithub },
+  { name: "Postman", level: 95, category: "Tools", icon: SiPostman },
+  { name: "Figma", level: 80, category: "Tools", icon: SiFigma },
+  { name: "BigQuery", level: 70, category: "Data Analytics", icon: BigQueryIcon },
+  { name: "Power BI", level: 80, category: "Data Analytics", icon: PowerBIIcon },
+  { name: "Pandas", level: 85, category: "Data Analytics", icon: SiPandas },
+  { name: "NumPy", level: 85, category: "Data Analytics", icon: SiNumpy },
 
-  { name: "Generative AI", level: 75, category: "AI" },
-  { name: "Prompt Engineering", level: 90, category: "AI" },
-  { name: "Deep Learning", level: 65, category: "ML" },
-
-  { name: "Accessibility", level: 90, category: "UX" },
-  { name: "Responsive Design", level: 95, category: "UX" },
-
-  { name: "Arduino DIY", level: 75, category: "IoT" },
-
-  // Additional entries from commented list that are domain/soft skills
-  { name: "IdAM (Identity & Access Management)", level: 99, category: "Security" },
-  { name: "IGA (Identity Governance & Administration)", level: 99, category: "Security" },
-
-  // Keep this as the last section marker — add new skills above as needed
-
+  // --- Creative ---
+  { name: "DaVinci Resolve", level: 70, category: "Creative", icon: DaVinciResolveIcon },
+  { name: "FL Studio", level: 70, category: "Creative", icon: FLStudioIcon },
 ];
+
 
 export const PROJECTS = [
   {
@@ -300,6 +211,7 @@ export const PROJECTS = [
   {
     id: 'soc-hunt-suite',
     title: 'SOC Hunt Suite (Private)',
+    featured: true,
     description: 'A centralized platform designed to proactively monitor and mitigate SSRF, Identity & Access Management threats (IdAM).',
     tech: ['React', 'TypeScript', 'Redis', 'Kafka','GraphQL','Prometheus','Grafana'],
     // github: '',
@@ -320,6 +232,7 @@ export const PROJECTS = [
   {
     id: 'blog-cms',
     title: 'Blog CMS App',
+    featured: true,
     description: 'A beautiful, production-ready blog CMS built with Next.js 14, featuring a forest-themed design that connects people through storytelling.',
     tech: ['Next.js', 'React 18', 'TypeScript', 'Tailwind CSS'],
     github: 'https://github.com/RajeshHsejar27/BlogCMS-using-Next.js',
@@ -356,6 +269,74 @@ export const PROJECTS = [
     live: 'https://utility-application.netlify.app/',
     image: '/5.png',
     category: 'web'
-  }
+  },
+  {
+  id: 'chronicles',
+  title: 'Chronicles',
+  description: 'A modern full-stack journaling and storytelling platform with secure auth, rich text editing, and scalable backend APIs.',
+  tech: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+  github: 'https://github.com/RajeshHsejar27/Chronicles-using-Python-FastAPI-Redis-Postgresql-Next.js',
+  // live: '',
+  image: '/9.png',
+  category: 'web'
+},
+
+{
+  id: 'n8n-nodemation',
+  title: 'n8n Nodemations',
+  featured: true,
+  description: 'A collection of AI-powered automation workflows using n8n to build onboarding systems, AI agents, content generators, and business automation pipelines.',
+  tech: ['n8n', 'OpenAI APIs', 'Node.js', 'Webhooks', 'REST APIs'],
+  github: 'https://github.com/RajeshHsejar27/n8n-nodemation-projects',
+  // live: '',
+  image: '/8.png',
+  category: 'ai'
+},
+
+{
+  id: 'cache-engine',
+  title: 'High-Performance Cache Engine',
+  description: 'A Redis-compatible in-memory cache engine built in Rust with lock-free reads, LRU/LFU/ARC eviction, AOF persistence, and async networking.',
+  tech: ['Rust', 'Tokio', 'DashMap', 'RESP Protocol', 'Benchmarking', 'Flamegraph'],
+  github: 'https://github.com/RajeshHsejar27/High-Performance-In-Memory-Cache-Engine--Rust-',
+  // live: '',
+  image: '/10.png',
+  category: 'systems'
+},
+
+{
+  id: 'adaptive-task-scheduler',
+  title: 'Adaptive Load-Aware Task Scheduler',
+  description: 'A Go-based intelligent scheduler that dynamically assigns jobs using real-time CPU, memory, and latency feedback, outperforming static schedulers.',
+  tech: ['Go', 'Goroutines', 'Channels', 'Prometheus', 'Distributed Systems'],
+  github: 'https://github.com/RajeshHsejar27/Adaptive-Load-Aware-Task-Scheduler',
+  // live: '',
+  image: '/11.png',
+  category: 'systems'
+},
+
+{
+  id: 'llm-inference',
+  title: 'Distributed LLM Inference Platform',
+  description: 'A scalable inference system supporting multiple LLMs with request routing, caching, load balancing, and latency-aware processing.',
+  tech: ['Python', 'FastAPI', 'Redis', 'Docker'],
+  github: 'https://github.com/RajeshHsejar27/Distributed-LLM-Inference-Platform',
+  // live: '',
+  image: '/12.png',
+  category: 'ai'
+},
+
+{
+  id: 'creative-mern',
+  title: 'Ancient Artifact Marketplace',
+  description: 'Mayhem Cart - A themed MERN-stack e-commerce mockup where users trade ancient artifacts using virtual gold coins, featuring secure auth, inventory management, and dynamic transaction flows.',
+  tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
+  github: 'https://github.com/RajeshHsejar27/Creative-Ecommerce-app-using-MERN-stack',
+  live: 'https://the-mayhem-cart.onrender.com/',
+  image: '/13.jpeg',
+  category: 'web'
+},
+
+
 
 ];

@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { SITE_CONFIG } from '@/lib/constants';
 
-const inter = Inter({ subsets: ['latin'], preload: false });
+const jakarta  = Plus_Jakarta_Sans({ subsets: ['latin'], preload: false });
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
@@ -48,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jakarta.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

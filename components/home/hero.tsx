@@ -39,8 +39,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-black-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Software Engineer & Tech Enthusiast passionate about creating innovative solutions 
-              with modern web technologies, cybersecurity, and AI.
+              Results-driven Octane Software Developer and System Architect with exceptional technical caliber and adaptive skill set spanning around Modern Web technologies, Cyber Security & Artificial Intelligence.
             </p>
           </motion.div>
 

@@ -17,14 +17,14 @@
 }
 
 .hero-section {
-  background-image: url('/backgroundl.jpg');
+  /* background-image: url('/backgroundl.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .dark{
   .hero-section {
-  background-image: url('/backgroundd.jpg');
+  /* background-image: url('/backgroundd.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
 }
