@@ -19,17 +19,12 @@ export function FeaturedProjects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
 
+  // --- Function to handle opening the modal ---
   const handleOpenModal = (status?: string) => {
   setModalMessage(status || 'This project is currently under progress...');
   setModalOpen(true);
 };
 
-  // --- Function to handle opening the modal ---
-  const handleOpenModal = (status) => {
-    // Fallback message if no status is provided in constants
-    setModalMessage(status || 'This project is currently under progress or is a local development project.');
-    setModalOpen(true);
-  };
 
   return (
     <section className="featured-section py-20 ">
@@ -117,7 +112,7 @@ export function FeaturedProjects() {
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live
                       </Button>
-                    )}
+               
                     )}
                   </div>
                 </CardContent>
