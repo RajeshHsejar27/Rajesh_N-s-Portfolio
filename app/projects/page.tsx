@@ -23,12 +23,13 @@ export default function Projects() {
     ? PROJECTS 
     : PROJECTS.filter(project => project.category === filter);
 
-  // --- Function to handle opening the modal ---
-  const handleOpenModal = (status) => {
-    // Fallback message if no status is provided in constants
-    setModalMessage(status || 'This project is currently under progress or is a local development project.');
-    setModalOpen(true);
-  };
+    // --- Function to handle opening the modal ---
+  const handleOpenModal = (status?: string) => {
+  setModalMessage(status || 'This project is currently under progress...');
+  setModalOpen(true);
+};
+
+
 
   return (
     <Layout>
@@ -114,7 +115,7 @@ export default function Projects() {
                       </Button>
 
                       {/* --- MODIFIED LIVE BUTTON LOGIC --- */}
-                      {project.live ? (
+                  {project.live ? (
                         <Button size="sm" asChild className="flex-1">
                           <a href={project.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4 mr-2" />
@@ -125,11 +126,13 @@ export default function Projects() {
                         <Button 
                           size="sm" 
                           className="flex-1"
-                          onClick={() => handleOpenModal(project.status?: string)}
+                          // REMOVED the "?: string" from here. It should just pass the variable.
+                          onClick={() => handleOpenModal(project.status)}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
                           Live
                         </Button>
+                   
                       )}
 
                     </div>
