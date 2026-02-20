@@ -386,7 +386,7 @@ export const PROJECTS = [
   // live: '',
   status: 'This project is currently in active development. Stay tuned for the live release!',
   image: '/offline-pm-suite.png',
-  category: 'web'
+  category: 'systems'
 },
 {
   id: 'object-detection-using-yolov3',
