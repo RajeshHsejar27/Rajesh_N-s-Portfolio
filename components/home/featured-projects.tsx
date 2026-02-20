@@ -19,6 +19,11 @@ export function FeaturedProjects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
 
+  const handleOpenModal = (status?: string) => {
+  setModalMessage(status || 'This project is currently under progress...');
+  setModalOpen(true);
+};
+
   // --- Function to handle opening the modal ---
   const handleOpenModal = (status) => {
     // Fallback message if no status is provided in constants
@@ -106,11 +111,13 @@ export function FeaturedProjects() {
                       <Button 
                         size="sm" 
                         className="flex-1"
-                        onClick={() => handleOpenModal(project.status?: string)}
+                        // REMOVED the "?: string" from here. It should just pass the variable.
+                        onClick={() => handleOpenModal(project.status)}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live
                       </Button>
+                    )}
                     )}
                   </div>
                 </CardContent>
