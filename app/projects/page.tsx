@@ -125,7 +125,7 @@ export default function Projects() {
                         <Button 
                           size="sm" 
                           className="flex-1"
-                          onClick={() => handleOpenModal(project.status)}
+                          onClick={() => handleOpenModal(project.status?: string)}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
                           Live
