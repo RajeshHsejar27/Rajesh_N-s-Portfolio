@@ -54,8 +54,8 @@ export function Hero() {
               className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
               asChild
             >
-              <Link href="/projects">
-                View My Work
+              <Link href="/about">
+                Know about me
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
