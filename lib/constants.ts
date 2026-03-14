@@ -448,9 +448,9 @@ export const PROJECTS = [
   title: 'Advanced RAG Gen AI System',
   description: 'A production-ready Retrieval-Augmented Generation system with a LangGraph agent, Qdrant vector store, PostgreSQL persistent memory, and a Next.js frontend.',
   tech: ['FastAPI', 'LangGraph','LiteLLM','Qdrant','PostgreSQL','Next.js'],
-  github: 'https://github.com/RajeshHsejar27/Goal-Keeper-App-using-React-Native',
+  github: 'https://github.com/RajeshHsejar27/RAG-Chatbot-using-Next.js-LangGraph',
   // live: '',
-  status: 'This is a local Nextjs native project. Please check the GitHub repository to run it locally & build the apk.',
+  status: 'This is a local Nextjs project. Please check the GitHub repository to run it locally.',
   image: '/rag-system-advanced.jpg',
   category: 'aI'
 },
