@@ -421,6 +421,39 @@ export const PROJECTS = [
   image: '/goal-keeper-app.png',
   category: 'android'
 },
+{
+  id: 'advanced-genai-platform',
+  title: 'Enterprise Gen AI for IAM, IGA, PAM',
+  description: 'Advanced Generative AI platform for a conversational style assistance to business with various IdAM, PAM, IGA specialized solutions development & Deployment.',
+  tech: ['React.js', 'Langchain','RBAC','Pydantic','IO Sanitization'],
+  github: 'https://github.com/RajeshHsejar27/Advanced-GenAI-for-IdAM-IGA-PAM',
+  // live: '',
+  status: 'This is a local Reactjs project. Please check the GitHub repository to run it locally.',
+  image: '/advanced-genai-platform.jpg',
+  category: 'aI'
+},
+{
+  id: 'hybrid-ai-assistant',
+  title: 'Hybrid AI Assistant',
+  description: 'A local (Swtichable to cloud on demand) hybrid AI agent platform with pluggable tools and persistent RAG storage.',
+  tech: ['Langchain', 'Python','Chainlit','Chromadb','Pydantic'],
+  github: 'https://github.com/RajeshHsejar27/RAG-Chatbot-using-Chainlit-Langchain',
+  // live: '',
+  status: 'This is a local Langchain project. Please check the GitHub repository to run it locally.',
+  image: '/hybrid-ai-assistant.jpg',
+  category: 'aI'
+},
+{
+  id: 'rag-system-advanced',
+  title: 'Advanced RAG Gen AI System',
+  description: 'A production-ready Retrieval-Augmented Generation system with a LangGraph agent, Qdrant vector store, PostgreSQL persistent memory, and a Next.js frontend.',
+  tech: ['FastAPI', 'LangGraph','LiteLLM','Qdrant','PostgreSQL','Next.js'],
+  github: 'https://github.com/RajeshHsejar27/Goal-Keeper-App-using-React-Native',
+  // live: '',
+  status: 'This is a local Nextjs native project. Please check the GitHub repository to run it locally & build the apk.',
+  image: '/rag-system-advanced.jpg',
+  category: 'aI'
+},
 
 
 
