@@ -454,6 +454,17 @@ export const PROJECTS = [
   image: '/rag-system-advanced.jpg',
   category: 'aI'
 },
+  {
+  id: 'cal-weight-tracker',
+  title: 'Calories & Weight Tracker',
+  description: 'A simple calorie and weight goal tracker with import export data and local data storage with no sign in functionality & responsive design',
+  tech: ['React', 'Tailwind CSS','Zustand','Lucide React','LocalStorage'],
+  github: 'https://github.com/RajeshHsejar27/calorie-and-weightgoal-tracker-using-React-vite--tailwindcss-zustand',
+   live: 'https://kcal-weight-tracker.netlify.app/',
+    // status: 'This is a local Nextjs project. Please check the GitHub repository to run it locally.',
+  image: '/cal-tracker.jpeg',
+  category: 'web'
+},
 
 
 
